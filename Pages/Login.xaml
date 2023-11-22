@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Ponto.Pages.Login"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login"
+    Padding="20"
+    BackgroundColor="#F5F5F5">
+
+    <StackLayout
+        Padding="16"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        <Image
+            Margin="0,0,0,32"
+            Aspect="AspectFit"
+            Source="logo.png"
+            WidthRequest="200" />
+
+        <FlexLayout Margin="0,0,0,8" Direction="Row">
+            <Border StrokeShape="RoundRectangle 5" StrokeThickness="0">
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity=".3"
+                        Offset="2,5" />
+                </Border.Shadow>
+                <ContentView Padding="10" BackgroundColor="#e2e2e2">
+                    <Image Aspect="Center" Source="user.png" />
+                </ContentView>
+            </Border>
+
+            <Border StrokeShape="RoundRectangle 5" StrokeThickness="0">
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity=".3"
+                        Offset="6,5" />
+                </Border.Shadow>
+                <Entry
+                    x:Name="txtMatricula"
+                    BackgroundColor="#e2e2e2"
+                    FontSize="16"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Placeholder="Matrícula"
+                    PlaceholderColor="#A9A9A9"
+                    Text="084354"
+                    TextColor="Black"
+                    WidthRequest="180" />
+            </Border>
+        </FlexLayout>
+
+        <FlexLayout Margin="0,0,0,8" Direction="Row">
+            <Border StrokeShape="RoundRectangle 5" StrokeThickness="0">
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity=".3"
+                        Offset="2,5" />
+                </Border.Shadow>
+                <ContentView Padding="10" BackgroundColor="#e2e2e2">
+                    <Image Aspect="Center" Source="senha.png" />
+                </ContentView>
+            </Border>
+
+            <Border StrokeShape="RoundRectangle 5" StrokeThickness="0">
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity=".3"
+                        Offset="6,5" />
+                </Border.Shadow>
+                <Entry
+                    x:Name="txtSenha"
+                    BackgroundColor="#e2e2e2"
+                    FontSize="16"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    IsPassword="True"
+                    Placeholder="Senha"
+                    PlaceholderColor="#A9A9A9"
+                    Text="084354@@"
+                    TextColor="Black"
+                    WidthRequest="180" />
+            </Border>
+
+
+        </FlexLayout>
+
+
+
+
+        <Button
+            x:Name="btnLogin"
+            Margin="0,16,0,0"
+            BackgroundColor="#43054e"
+            Clicked="btnLogin_Clicked"
+            FontSize="16"
+            Text="Acessar"
+            TextColor="White" />
+
+    </StackLayout>
+</ContentPage>
